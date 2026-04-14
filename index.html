@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSPages | Digital Equity for the Next Generation of Founders</title>
+    <style>
+        :root {
+            /* Mayteck C.S. Theming */
+            --bg-color: #0b0f1a;
+            --card-bg: #161e2e;
+            --accent-blue: #38bdf8; 
+            --accent-gold: #f59e0b; 
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--accent-blue); }
+        .nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; }
+
+        /* Hero Section */
+        header { text-align: center; padding: 6rem 1rem; background: radial-gradient(circle at top, #1e293b 0%, #0b0f1a 100%); }
+        .mission-tag { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; margin-bottom: 1rem; display: block; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin: 0; line-height: 1.1; }
+        .hero-sub { max-width: 700px; margin: 1.5rem auto; color: var(--text-dim); font-size: 1.25rem; }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover { border-color: var(--accent-blue); transform: translateY(-4px); }
+        .card h3 { color: var(--accent-blue); margin-top: 0; }
+        .card p { color: var(--text-dim); margin-bottom: 0; }
+
+        .feature-main { grid-column: span 2; grid-row: span 2; background: linear-gradient(135deg, #161e2e 0%, #1e293b 100%); }
+        .feature-main h2 { font-size: 2rem; color: var(--accent-gold); }
+
+        /* Footer */
+        footer { border-top: 1px solid var(--border); padding: 4rem 0; text-align: center; color: var(--text-dim); }
+        .footer-mission { max-width: 600px; margin: 0 auto 2rem; font-style: italic; font-size: 0.9rem; }
+
+        .btn {
+            background: var(--accent-blue);
+            color: var(--bg-color);
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .feature-main { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="logo">MCSPages</div>
+        <div class="nav-links">
+            <a href="#mission">Mission</a>
+            <a href="#apply">Apply</a>
+            <a href="https://mayteckcs.com" target="_blank">Mayteck C.S.</a>
+        </div>
+    </nav>
+</div>
+
+<header>
+    <span class="mission-tag">Opening avenues for the disenfranchised</span>
+    <h1>Paving a Free Lane onto the Digital Highway</h1>
+    <p class="hero-sub">Providing foundational web infrastructure for underrepresented startups and community elders.</p>
+    <a href="#apply" class="btn">Get Started</a>
+</header>
+
+<div class="container">
+    <div class="bento-grid">
+        <div class="card feature-main">
+            <h2>Our Mission</h2>
+            <p style="font-size: 1.2rem; color: var(--text-main);">
+                MCSPages exists to strip away financial barriers. By leveraging low-overhead, high-performance technology like GitHub and Cloudflare, we provide world-class foundations for minority-owned startups.
+            </p>
+            <p style="margin-top: 1.5rem;">
+                Our goal is to jumpstart the "little guy" with our technical expertise, so they can focus on what they know best: running their business.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Minority Foundations</h3>
+            <p>Direct support for underrepresented founders to secure their professional digital identity without monthly overhead.</p>
+        </div>
+
+        <div class="card">
+            <h3>Silver Tech</h3>
+            <p>Specialized onboarding for community elders. We translate complex tech into simple, manageable business tools.</p>
+        </div>
+
+        <div class="card">
+            <h3>Zero-Cost Stack</h3>
+            <p>Utilizing <code>.pages.dev</code> and GitHub for high-speed, secure, and permanent hosting at no cost to the founder.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="footer-mission">
+            "We believe digital equity is achieved when status no longer dictates the quality of a business's online presence."
+        </p>
+        <p>&copy; 2024–<span id="current-year"></span> MCSPages | A Mayteck C.S. Initiative</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
